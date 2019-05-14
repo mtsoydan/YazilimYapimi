@@ -17,27 +17,51 @@ namespace IngilizceKelimeOgreniyorum
         {
             InitializeComponent();
         }
-        private static ucKelimeEkle _instance;
+        //private static ucKelimeEkle _instance;
 
-        public static ucKelimeEkle Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new ucKelimeEkle();
-                }
+        //public static ucKelimeEkle Instance
+        //{
+        //    get
+        //    {
+        //        if (_instance == null)
+        //        {
+        //            _instance = new ucKelimeEkle();
+        //        }
 
 
-                return _instance;
-            }
-        }
+        //        return _instance;
+        //    }
+        //}
+
+        MyDataClassesDataContext mydt = new MyDataClassesDataContext();
         private void labelControl1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void ucKelimeEkle_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void windowsUIButtonPanel1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mydt.spKelimeEkle(txt_turkce.Text, txt_ingilizce.Text, txt_KelimeTuru.Text, txt_aciklama.Text, "Baslangic", -1, DateTime.Now);
+
+                    mydt.SubmitChanges();
+                MessageBox.Show("Kayıt Başarıyla Eklendi");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

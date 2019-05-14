@@ -19,51 +19,54 @@ namespace IngilizceKelimeOgreniyorum
 
         private void aceKelimeEkle_Click(object sender, EventArgs e)
         {
-            
 
-                if (!FormContainer.Controls.Contains(ucKelimeEkle.Instance))
-            {
-                FormContainer.Controls.Add(ucKelimeEkle.Instance);
-                ucKelimeEkle.Instance.Dock = DockStyle.Fill;
-                ucKelimeEkle.Instance.BringToFront();
-            }
-            ucKelimeEkle.Instance.BringToFront();
+
+            ucKelimeEkle uck = new ucKelimeEkle();
+            FormContainer.Controls.Add(uck);
+            uck.Dock = DockStyle.Fill;
+            uck.BringToFront();
+
 
         }
 
         private void aceKelimeSec_Click(object sender, EventArgs e)
         {
-            if (!FormContainer.Controls.Contains(ucKelimeSec.Instance))
-            {
-                FormContainer.Controls.Add(ucKelimeSec.Instance);
-                ucKelimeSec.Instance.Dock = DockStyle.Fill;
-                ucKelimeSec.Instance.BringToFront();
-            }
-            ucKelimeSec.Instance.BringToFront();
+            
+            ucKelimeSec uck = new ucKelimeSec();
+            FormContainer.Controls.Add(uck);
+            uck.Dock = DockStyle.Fill;
+            uck.BringToFront();
         }
 
         private void AceKelimeOgren_Click(object sender, EventArgs e)
         {
-            if (!FormContainer.Controls.Contains(ucKelimeOgren.Instance))
-            {
-                FormContainer.Controls.Add(ucKelimeOgren.Instance);
-                ucKelimeOgren.Instance.Dock = DockStyle.Fill;
-                ucKelimeOgren.Instance.BringToFront();
-            }
-            ucKelimeOgren.Instance.BringToFront();
+
+            ucKelimeOgren uck = new ucKelimeOgren();
+            FormContainer.Controls.Add(uck);
+            uck.Dock = DockStyle.Fill;
+            uck.BringToFront();
         }
 
         private void aceTesteBasla_Click(object sender, EventArgs e)
         {
-            
+            ucTesteBasla uck = new ucTesteBasla();
+            FormContainer.Controls.Add(uck);
+            uck.Dock = DockStyle.Fill;
+            uck.BringToFront();
 
-                 if (!FormContainer.Controls.Contains(ucTesteBasla.Instance))
-            {
-                FormContainer.Controls.Add(ucTesteBasla.Instance);
-                ucTesteBasla.Instance.Dock = DockStyle.Fill;
-                ucTesteBasla.Instance.BringToFront();
-            }
-            ucTesteBasla.Instance.BringToFront();
+
+            //if (!FormContainer.Controls.Contains(ucTesteBasla.Instance))
+            //{
+            //    FormContainer.Controls.Add(ucTesteBasla.Instance);
+            //    ucTesteBasla.Instance.Dock = DockStyle.Fill;
+            //    ucTesteBasla.Instance.BringToFront();
+            //}
+            //ucTesteBasla.Instance.BringToFront();
+        }
+
+        private void frm_anaSayfa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

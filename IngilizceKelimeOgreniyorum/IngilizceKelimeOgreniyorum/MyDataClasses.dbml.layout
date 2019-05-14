@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MyDataClasses">
+  <DataContextMoniker Name="/MyDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="bd12099e-ad19-4d25-a56b-ae8273327b42" absoluteBounds="2, 0.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/MyDataClassesDataContext/View_SorularıGoruntule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d0a9f0d-c9ec-49a3-aaab-655acd0cb039" absoluteBounds="2.015, 1.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aded976a-9f49-49bf-b3cc-8eaba8f006c2" absoluteBounds="4.25, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/MyDataClassesDataContext/tbl_Kelime" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f4d0ba4-68de-4a3e-8ecf-78dc892d0104" absoluteBounds="4.265, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
