@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Software Construction
 MCBU software engineering is the first project of Software Construction.
 
