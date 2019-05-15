@@ -22,6 +22,8 @@ namespace IngilizceKelimeOgreniyorum
         DataTable datatable = null;
         int ToplamSoruSayisi = 0,sayac = 0;
         int[] rastgele = new int[4];
+        int[] karmaSorular;
+
         Random rnd = new Random();
         public void Kontrol(string cevap)
         {
@@ -29,8 +31,8 @@ namespace IngilizceKelimeOgreniyorum
             Cevap = MessageBox.Show("Son kararınızmı  ?", "Uyarı", MessageBoxButtons.YesNo);
             if (Cevap == DialogResult.Yes)
             {
-                var sorgu = from kelime in mydt.tbl_Kelimes where kelime.KelimeID == int.Parse(datatable.Rows[sayac][0].ToString()) select kelime;
-                if (cevap == datatable.Rows[sayac][2].ToString())
+                var sorgu = from kelime in mydt.tbl_Kelimes where kelime.KelimeID == int.Parse(datatable.Rows[karmaSorular[sayac]][0].ToString()) select kelime;
+                if (cevap == datatable.Rows[karmaSorular[sayac]][2].ToString())
                 {
                     MessageBox.Show("Doğru Cevap");
                    
@@ -62,24 +64,34 @@ namespace IngilizceKelimeOgreniyorum
                 {
 
                     int i = 0;
-                    while (i < 2)
+
+                    while (i < 3)
                     {
                         int sayi = rnd.Next(0, ToplamSoruSayisi);
 
-                        if (rastgele.Contains(sayi) || rastgele.Contains(sayac))
+
+                        if (rastgele.Contains(sayi))
                         {
                             continue;
                         }
-                        
 
                         rastgele[i] = sayi;
-
-
                         i++;
+
+
                     }
-                    rastgele[3] = sayac;
-                    Array.Sort(rastgele);
-                    lbl_tr.Text = datatable.Rows[sayac][1].ToString();
+                    if (!rastgele.Contains(karmaSorular[sayac]))
+                    {
+                        rastgele[3] = karmaSorular[sayac];
+                    }
+
+
+
+
+
+                    //Array.Sort(rastgele);
+
+                    lbl_tr.Text = datatable.Rows[karmaSorular[sayac]][1].ToString();
                     btn_Cevap1.Text = datatable.Rows[rastgele[0]][2].ToString();
                     btn_cevap2.Text = datatable.Rows[rastgele[1]][2].ToString();
                     btn_cevap3.Text = datatable.Rows[rastgele[2]][2].ToString();
@@ -89,8 +101,7 @@ namespace IngilizceKelimeOgreniyorum
                 else
                 {
                     MessageBox.Show("Test Tamamlandı");
-                    frm_anaSayfa frm = new frm_anaSayfa();
-                    frm.Show();
+                    
                    
                 }
 
@@ -120,16 +131,58 @@ namespace IngilizceKelimeOgreniyorum
         {
             try
             {
+                
                 datatable = data.DurumaGoreListele("test");
                 ToplamSoruSayisi = datatable.Rows.Count;
                 //  lbl_ing.Text = datatable.Rows[sayac][2].ToString();
-                lbl_tr.Text = datatable.Rows[sayac][1].ToString();
-                btn_Cevap1.Text = datatable.Rows[sayac][2].ToString();
-                btn_cevap2.Text = datatable.Rows[sayac + 1][2].ToString();
-                btn_cevap3.Text = datatable.Rows[sayac + 2][2].ToString();
-                btn_cevap4.Text = datatable.Rows[sayac + 3][2].ToString();
+                
+                karmaSorular = new int[ToplamSoruSayisi];
+                int i = 0;
+                while (i < ToplamSoruSayisi-1)
+                {
+                    int deneme = rnd.Next(0, ToplamSoruSayisi);
 
 
+                    if (karmaSorular.Contains(deneme))
+                    {
+                        continue;
+                    }
+
+                    karmaSorular[i] = deneme;
+                    i++;
+
+
+                }
+                //lbl_tr.Text = datatable.Rows[sayac][1].ToString();
+                //btn_Cevap1.Text = datatable.Rows[sayac][2].ToString();
+                //btn_cevap2.Text = datatable.Rows[sayac + 1][2].ToString();
+                //btn_cevap3.Text = datatable.Rows[sayac + 2][2].ToString();
+                //btn_cevap4.Text = datatable.Rows[sayac + 3][2].ToString();
+                i = 0;
+                while (i < 3)
+                {
+                    int sayi = rnd.Next(0, ToplamSoruSayisi);
+
+
+                    if (rastgele.Contains(sayi))
+                    {
+                        continue;
+                    }
+
+                    rastgele[i] = sayi;
+                    i++;
+
+
+                }
+                if (!rastgele.Contains(karmaSorular[sayac]))
+                {
+                    rastgele[3] = karmaSorular[sayac];
+                }
+                lbl_tr.Text = datatable.Rows[karmaSorular[sayac]][1].ToString();
+                btn_Cevap1.Text = datatable.Rows[rastgele[0]][2].ToString();
+                btn_cevap2.Text = datatable.Rows[rastgele[1]][2].ToString();
+                btn_cevap3.Text = datatable.Rows[rastgele[2]][2].ToString();
+                btn_cevap4.Text = datatable.Rows[rastgele[3]][2].ToString();
 
 
             }
