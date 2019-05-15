@@ -47,6 +47,7 @@ namespace IngilizceKelimeOgreniyorum
         {
             try
             {
+               
                 mydt.spKelimeEkle(txt_turkce.Text, txt_ingilizce.Text, txt_KelimeTuru.Text, txt_aciklama.Text, "Baslangic", -1, DateTime.Now);
 
                     mydt.SubmitChanges();

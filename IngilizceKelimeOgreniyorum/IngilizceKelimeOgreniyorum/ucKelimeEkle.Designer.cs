@@ -44,11 +44,13 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_turkce.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_KelimeTuru.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_aciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ingilizce.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -73,6 +75,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.comboBoxEdit1);
             this.panel1.Controls.Add(this.txt_KelimeTuru);
             this.panel1.Controls.Add(this.labelControl7);
             this.panel1.Controls.Add(this.labelControl8);
@@ -202,6 +205,15 @@
             this.labelControl6.Size = new System.Drawing.Size(526, 34);
             this.labelControl6.TabIndex = 1;
             // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.Location = new System.Drawing.Point(360, 286);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Size = new System.Drawing.Size(125, 42);
+            this.comboBoxEdit1.TabIndex = 14;
+            // 
             // ucKelimeEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -215,6 +227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_KelimeTuru.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_aciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ingilizce.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,5 +249,6 @@
         private DevExpress.XtraEditors.TextEdit txt_KelimeTuru;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
     }
 }
