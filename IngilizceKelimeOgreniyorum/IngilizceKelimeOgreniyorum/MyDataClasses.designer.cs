@@ -65,14 +65,6 @@ namespace IngilizceKelimeOgreniyorum
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<View_SorularıGoruntule> View_SorularıGoruntules
-		{
-			get
-			{
-				return this.GetTable<View_SorularıGoruntule>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tbl_Kelime> tbl_Kelimes
 		{
 			get
@@ -81,18 +73,12 @@ namespace IngilizceKelimeOgreniyorum
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spKelimeEkle")]
-		public int spKelimeEkle([global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeTr", DbType="NVarChar(50)")] string kelimeTr, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeIng", DbType="NVarChar(50)")] string kelimeIng, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeTuru", DbType="NVarChar(50)")] string kelimeTuru, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOrnek", DbType="NVarChar(50)")] string kelimeOrnek, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeDurumu", DbType="NVarChar(50)")] string kelimeOgrenmeDurumu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeSeviyesi", DbType="Int")] System.Nullable<int> kelimeOgrenmeSeviyesi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeTarihi", DbType="DateTime")] System.Nullable<System.DateTime> kelimeOgrenmeTarihi)
+		public System.Data.Linq.Table<View_SorularıGoruntule> View_SorularıGoruntules
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), kelimeTr, kelimeIng, kelimeTuru, kelimeOrnek, kelimeOgrenmeDurumu, kelimeOgrenmeSeviyesi, kelimeOgrenmeTarihi);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spKelimeDurumGüncelleOgren")]
-		public int spKelimeDurumGüncelleOgren([global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeID", DbType="Int")] System.Nullable<int> kelimeID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeDurumu", DbType="NVarChar(50)")] string kelimeOgrenmeDurumu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeSeviye", DbType="NVarChar(50)")] string kelimeOgrenmeSeviye)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), kelimeID, kelimeOgrenmeDurumu, kelimeOgrenmeSeviye);
-			return ((int)(result.ReturnValue));
+			get
+			{
+				return this.GetTable<View_SorularıGoruntule>();
+			}
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.OgrenmeDurumuTestOlanlar")]
@@ -115,158 +101,19 @@ namespace IngilizceKelimeOgreniyorum
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), kelimeID, kelimeOgrenmeDurumu);
 			return ((int)(result.ReturnValue));
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_SorularıGoruntule")]
-	public partial class View_SorularıGoruntule
-	{
 		
-		private int _KelimeID;
-		
-		private string _KelimeTR;
-		
-		private string _KelimeIng;
-		
-		private string _KelimeTuru;
-		
-		private string _KelimeOrnek;
-		
-		private string _KelimeOgrenmeDurumu;
-		
-		private int _KelimeOgrenmeSeviye;
-		
-		private System.DateTime _KelimeOgrenmeTarihi;
-		
-		public View_SorularıGoruntule()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spKelimeDurumGüncelleOgren")]
+		public int spKelimeDurumGüncelleOgren([global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeID", DbType="Int")] System.Nullable<int> kelimeID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeDurumu", DbType="NVarChar(50)")] string kelimeOgrenmeDurumu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeSeviye", DbType="NVarChar(50)")] string kelimeOgrenmeSeviye)
 		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), kelimeID, kelimeOgrenmeDurumu, kelimeOgrenmeSeviye);
+			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int KelimeID
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spKelimeEkle")]
+		public int spKelimeEkle([global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeTr", DbType="NVarChar(50)")] string kelimeTr, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeIng", DbType="NVarChar(50)")] string kelimeIng, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeTuru", DbType="NVarChar(50)")] string kelimeTuru, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOrnek", DbType="NVarChar(50)")] string kelimeOrnek, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeDurumu", DbType="NVarChar(50)")] string kelimeOgrenmeDurumu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeSeviyesi", DbType="Int")] System.Nullable<int> kelimeOgrenmeSeviyesi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeTarihi", DbType="DateTime")] System.Nullable<System.DateTime> kelimeOgrenmeTarihi)
 		{
-			get
-			{
-				return this._KelimeID;
-			}
-			set
-			{
-				if ((this._KelimeID != value))
-				{
-					this._KelimeID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeTR", DbType="NVarChar(50)")]
-		public string KelimeTR
-		{
-			get
-			{
-				return this._KelimeTR;
-			}
-			set
-			{
-				if ((this._KelimeTR != value))
-				{
-					this._KelimeTR = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeIng", DbType="NVarChar(50)")]
-		public string KelimeIng
-		{
-			get
-			{
-				return this._KelimeIng;
-			}
-			set
-			{
-				if ((this._KelimeIng != value))
-				{
-					this._KelimeIng = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeTuru", DbType="NVarChar(50)")]
-		public string KelimeTuru
-		{
-			get
-			{
-				return this._KelimeTuru;
-			}
-			set
-			{
-				if ((this._KelimeTuru != value))
-				{
-					this._KelimeTuru = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeOrnek", DbType="NVarChar(50)")]
-		public string KelimeOrnek
-		{
-			get
-			{
-				return this._KelimeOrnek;
-			}
-			set
-			{
-				if ((this._KelimeOrnek != value))
-				{
-					this._KelimeOrnek = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeOgrenmeDurumu", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string KelimeOgrenmeDurumu
-		{
-			get
-			{
-				return this._KelimeOgrenmeDurumu;
-			}
-			set
-			{
-				if ((this._KelimeOgrenmeDurumu != value))
-				{
-					this._KelimeOgrenmeDurumu = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeOgrenmeSeviye", DbType="Int NOT NULL")]
-		public int KelimeOgrenmeSeviye
-		{
-			get
-			{
-				return this._KelimeOgrenmeSeviye;
-			}
-			set
-			{
-				if ((this._KelimeOgrenmeSeviye != value))
-				{
-					this._KelimeOgrenmeSeviye = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeOgrenmeTarihi", DbType="DateTime NOT NULL")]
-		public System.DateTime KelimeOgrenmeTarihi
-		{
-			get
-			{
-				return this._KelimeOgrenmeTarihi;
-			}
-			set
-			{
-				if ((this._KelimeOgrenmeTarihi != value))
-				{
-					this._KelimeOgrenmeTarihi = value;
-				}
-			}
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), kelimeTr, kelimeIng, kelimeTuru, kelimeOrnek, kelimeOgrenmeDurumu, kelimeOgrenmeSeviyesi, kelimeOgrenmeTarihi);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -459,7 +306,7 @@ namespace IngilizceKelimeOgreniyorum
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeOgrenmeTarihi", DbType="DateTime")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeOgrenmeTarihi", DbType="Date")]
 		public System.Nullable<System.DateTime> KelimeOgrenmeTarihi
 		{
 			get
@@ -496,6 +343,159 @@ namespace IngilizceKelimeOgreniyorum
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_SorularıGoruntule")]
+	public partial class View_SorularıGoruntule
+	{
+		
+		private int _KelimeID;
+		
+		private string _KelimeTR;
+		
+		private string _KelimeIng;
+		
+		private string _KelimeTuru;
+		
+		private string _KelimeOrnek;
+		
+		private string _KelimeOgrenmeDurumu;
+		
+		private int _KelimeOgrenmeSeviye;
+		
+		private System.DateTime _KelimeOgrenmeTarihi;
+		
+		public View_SorularıGoruntule()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int KelimeID
+		{
+			get
+			{
+				return this._KelimeID;
+			}
+			set
+			{
+				if ((this._KelimeID != value))
+				{
+					this._KelimeID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeTR", DbType="NVarChar(50)")]
+		public string KelimeTR
+		{
+			get
+			{
+				return this._KelimeTR;
+			}
+			set
+			{
+				if ((this._KelimeTR != value))
+				{
+					this._KelimeTR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeIng", DbType="NVarChar(50)")]
+		public string KelimeIng
+		{
+			get
+			{
+				return this._KelimeIng;
+			}
+			set
+			{
+				if ((this._KelimeIng != value))
+				{
+					this._KelimeIng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeTuru", DbType="NVarChar(50)")]
+		public string KelimeTuru
+		{
+			get
+			{
+				return this._KelimeTuru;
+			}
+			set
+			{
+				if ((this._KelimeTuru != value))
+				{
+					this._KelimeTuru = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeOrnek", DbType="NVarChar(50)")]
+		public string KelimeOrnek
+		{
+			get
+			{
+				return this._KelimeOrnek;
+			}
+			set
+			{
+				if ((this._KelimeOrnek != value))
+				{
+					this._KelimeOrnek = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeOgrenmeDurumu", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string KelimeOgrenmeDurumu
+		{
+			get
+			{
+				return this._KelimeOgrenmeDurumu;
+			}
+			set
+			{
+				if ((this._KelimeOgrenmeDurumu != value))
+				{
+					this._KelimeOgrenmeDurumu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeOgrenmeSeviye", DbType="Int NOT NULL")]
+		public int KelimeOgrenmeSeviye
+		{
+			get
+			{
+				return this._KelimeOgrenmeSeviye;
+			}
+			set
+			{
+				if ((this._KelimeOgrenmeSeviye != value))
+				{
+					this._KelimeOgrenmeSeviye = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeOgrenmeTarihi", DbType="DateTime NOT NULL")]
+		public System.DateTime KelimeOgrenmeTarihi
+		{
+			get
+			{
+				return this._KelimeOgrenmeTarihi;
+			}
+			set
+			{
+				if ((this._KelimeOgrenmeTarihi != value))
+				{
+					this._KelimeOgrenmeTarihi = value;
+				}
 			}
 		}
 	}

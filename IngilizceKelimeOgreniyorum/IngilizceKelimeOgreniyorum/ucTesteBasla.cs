@@ -62,13 +62,11 @@ namespace IngilizceKelimeOgreniyorum
                 {
 
                     int i = 0;
-
-                    rastgele[3] = 0;
                     while (i < 2)
                     {
                         int sayi = rnd.Next(0, ToplamSoruSayisi);
 
-                        if (rastgele.Contains(sayi))
+                        if (rastgele.Contains(sayi) || rastgele.Contains(sayac))
                         {
                             continue;
                         }
@@ -80,7 +78,6 @@ namespace IngilizceKelimeOgreniyorum
                         i++;
                     }
                     rastgele[3] = sayac;
-
                     Array.Sort(rastgele);
                     lbl_tr.Text = datatable.Rows[sayac][1].ToString();
                     btn_Cevap1.Text = datatable.Rows[rastgele[0]][2].ToString();
@@ -96,6 +93,7 @@ namespace IngilizceKelimeOgreniyorum
                     frm.Show();
                    
                 }
+
             }
         }
         //private static ucTesteBasla _instance;
