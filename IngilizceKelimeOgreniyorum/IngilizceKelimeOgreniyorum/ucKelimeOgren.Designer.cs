@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_OgrenmeyiBitir = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.lbl_tur = new DevExpress.XtraEditors.LabelControl();
             this.btn_ileri = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
@@ -42,7 +43,6 @@
             this.lbl_turkce = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btn_OgrenmeyiBitir = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,19 @@
             this.panel1.Size = new System.Drawing.Size(518, 382);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btn_OgrenmeyiBitir
+            // 
+            windowsUIButtonImageOptions1.Image = global::IngilizceKelimeOgreniyorum.Properties.Resources.stop_32x32;
+            this.btn_OgrenmeyiBitir.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Öğrenmeyi Bitir", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            this.btn_OgrenmeyiBitir.ContentAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_OgrenmeyiBitir.Location = new System.Drawing.Point(313, 229);
+            this.btn_OgrenmeyiBitir.Name = "btn_OgrenmeyiBitir";
+            this.btn_OgrenmeyiBitir.Size = new System.Drawing.Size(90, 75);
+            this.btn_OgrenmeyiBitir.TabIndex = 10;
+            this.btn_OgrenmeyiBitir.Text = "windowsUIButtonPanel3";
+            this.btn_OgrenmeyiBitir.Click += new System.EventHandler(this.btn_OgrenmeyiBitir_Click);
             // 
             // labelControl3
             // 
@@ -170,18 +183,6 @@
             this.labelControl1.Size = new System.Drawing.Size(160, 34);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
-            // 
-            // btn_OgrenmeyiBitir
-            // 
-            windowsUIButtonImageOptions1.Image = global::IngilizceKelimeOgreniyorum.Properties.Resources.stop_32x32;
-            this.btn_OgrenmeyiBitir.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Öğrenmeyi Bitir", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
-            this.btn_OgrenmeyiBitir.ContentAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_OgrenmeyiBitir.Location = new System.Drawing.Point(313, 229);
-            this.btn_OgrenmeyiBitir.Name = "btn_OgrenmeyiBitir";
-            this.btn_OgrenmeyiBitir.Size = new System.Drawing.Size(90, 75);
-            this.btn_OgrenmeyiBitir.TabIndex = 10;
-            this.btn_OgrenmeyiBitir.Text = "windowsUIButtonPanel3";
             // 
             // ucKelimeOgren
             // 

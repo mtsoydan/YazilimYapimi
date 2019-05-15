@@ -108,6 +108,13 @@ namespace IngilizceKelimeOgreniyorum
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spDurumuTestYap")]
+		public int spDurumuTestYap([global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeID", DbType="Int")] System.Nullable<int> kelimeID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeDurumu", DbType="NVarChar(50)")] string kelimeOgrenmeDurumu)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), kelimeID, kelimeOgrenmeDurumu);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_SorularıGoruntule")]

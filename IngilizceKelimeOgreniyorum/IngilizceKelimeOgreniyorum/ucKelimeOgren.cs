@@ -19,6 +19,7 @@ namespace IngilizceKelimeOgreniyorum
         }
         Data data = new Data();
         DataTable datatable;
+        MyDataClassesDataContext mydt = new MyDataClassesDataContext();
         int toplamKelime = 0,sayac = 0;
 
         //private static ucKelimeOgren _instance;
@@ -107,12 +108,33 @@ namespace IngilizceKelimeOgreniyorum
 
         }
 
+        private void btn_OgrenmeyiBitir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                for (int i = 0; i < toplamKelime; i++)
+                {
+                    mydt.spDurumuTestYap(int.Parse(datatable.Rows[i][0].ToString()), "test");
+                    mydt.SubmitChanges();
+                    this.Enabled = false;
+                }
+                MessageBox.Show("Kelimeler Başarıyla Test Kısmına Eklenmiştir");
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show( ex.Message);
+            }
+        }
+
         private void ucKelimeOgren_Load(object sender, EventArgs e)
         {
             btn_OgrenmeyiBitir.Enabled = false;
             try
             {
-                datatable = data.OgrenmeDurumundakiKelimeleriListele();
+                datatable = data.DurumaGoreListele("ogren");
                 toplamKelime = datatable.Rows.Count;
                 lbl_turkce.Text = datatable.Rows[sayac][1].ToString();
                 lbl_ingilizce.Text = datatable.Rows[sayac][2].ToString();

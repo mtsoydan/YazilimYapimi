@@ -53,10 +53,10 @@ namespace IngilizceKelimeOgreniyorum
         }
 
 
-        public DataTable OgrenmeDurumundakiKelimeleriListele()
+        public DataTable DurumaGoreListele(string _durum)
         {
             DataTable dttable = new DataTable();
-            var sorgu = from kelime in mydt.OgrenmeDurumuTestOlanlar("ogren") select kelime;
+            var sorgu = from kelime in mydt.OgrenmeDurumuTestOlanlar(_durum) select kelime;
             dttable.Columns.Add(new DataColumn("KelimeID", typeof(int)));
             dttable.Columns.Add(new DataColumn("KelimeTr", typeof(string)));
             dttable.Columns.Add(new DataColumn("KelimeIng", typeof(string)));
