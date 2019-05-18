@@ -40,7 +40,7 @@ namespace IngilizceKelimeOgreniyorum
 
         private void ucKelimeEkle_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void windowsUIButtonPanel1_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace IngilizceKelimeOgreniyorum
             try
             {
                
-                mydt.spKelimeEkle(txt_turkce.Text, txt_ingilizce.Text, txt_KelimeTuru.Text, txt_aciklama.Text, "Baslangic", -1, DateTime.Now);
+                mydt.spKelimeEkle(txt_turkce.Text, txt_ingilizce.Text, cmbKelimeTur.SelectedItem.ToString(), txt_aciklama.Text, "Baslangic", -1, DateTime.Now);
 
                     mydt.SubmitChanges();
                 MessageBox.Show("Kayıt Başarıyla Eklendi");
@@ -65,6 +65,11 @@ namespace IngilizceKelimeOgreniyorum
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void cmbKelimeTur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
