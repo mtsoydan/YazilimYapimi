@@ -127,6 +127,8 @@ namespace IngilizceKelimeOgreniyorum
 
                 MessageBox.Show( ex.Message);
             }
+
+
         }
 
         private void ucKelimeOgren_Load(object sender, EventArgs e)

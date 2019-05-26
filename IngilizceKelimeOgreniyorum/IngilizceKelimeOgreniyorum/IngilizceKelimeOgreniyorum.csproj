@@ -102,6 +102,12 @@
     <Compile Include="ucKelimeSec.Designer.cs">
       <DependentUpon>ucKelimeSec.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucOgrenilmisKelimeler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucOgrenilmisKelimeler.Designer.cs">
+      <DependentUpon>ucOgrenilmisKelimeler.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucTesteBasla.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucKelimeSec.resx">
       <DependentUpon>ucKelimeSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucOgrenilmisKelimeler.resx">
+      <DependentUpon>ucOgrenilmisKelimeler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucTesteBasla.resx">
       <DependentUpon>ucTesteBasla.cs</DependentUpon>

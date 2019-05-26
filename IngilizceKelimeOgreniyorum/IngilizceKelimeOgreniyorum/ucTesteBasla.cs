@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace IngilizceKelimeOgreniyorum
 {
-    public partial class ucTesteBasla : DevExpress.XtraEditors.XtraUserControl 
+    public partial class ucTesteBasla : DevExpress.XtraEditors.XtraUserControl
     {
         public ucTesteBasla()
         {
@@ -20,31 +20,37 @@ namespace IngilizceKelimeOgreniyorum
         Data data = new Data();
         MyDataClassesDataContext mydt = new MyDataClassesDataContext();
         DataTable datatable = null;
-        int ToplamSoruSayisi = 0,sayac = 0;
+        int ToplamSoruSayisi = 0, sayac = 0;
         int[] rastgele = new int[4];
         int[] karmaSorular;
 
         Random rnd = new Random();
         public void Kontrol(string cevap)
         {
-            DialogResult Cevap = new DialogResult();
-            Cevap = MessageBox.Show("Son kararınızmı  ?", "Uyarı", MessageBoxButtons.YesNo);
-            if (Cevap == DialogResult.Yes)
+            DialogResult YesNo = new DialogResult();
+            YesNo = MessageBox.Show("Son kararınızmı  ?", "Uyarı", MessageBoxButtons.YesNo);
+            if (YesNo == DialogResult.Yes)
             {
+                //O anki test aşamasındaki anlık veri 
                 var sorgu = from kelime in mydt.tbl_Kelimes where kelime.KelimeID == int.Parse(datatable.Rows[karmaSorular[sayac]][0].ToString()) select kelime;
                 if (cevap == datatable.Rows[karmaSorular[sayac]][2].ToString())
                 {
                     MessageBox.Show("Doğru Cevap");
-                   
+
                     foreach (var item in sorgu)
                     {
-                        
                         item.KelimeOgrenmeSeviye += 1;
-                        item.KelimeOgrenmeTarihi = DateTime.Now;
+
+                        if (item.KelimeOgrenmeSeviye == 4)
+                        {
+                            item.KelimeOgrenmeDurumu = "ogrendi";
+                            item.KelimeOgrenmeTarihi = DateTime.Now;
+                        }
+                        // item.KelimeOgrenmeTarihi = DateTime.Now;
                     }
                     mydt.SubmitChanges();
                     sayac++;
-
+                    
                 }
                 else
                 {
@@ -53,7 +59,7 @@ namespace IngilizceKelimeOgreniyorum
                     foreach (var item in sorgu)
                     {
 
-                        item.KelimeOgrenmeSeviye -= 1;
+                        item.KelimeOgrenmeSeviye = 0;
                         item.KelimeOgrenmeDurumu = "ogren";
                     }
                     mydt.SubmitChanges();
@@ -86,25 +92,23 @@ namespace IngilizceKelimeOgreniyorum
                     }
 
 
-
-
-
-                    //Array.Sort(rastgele);
-
                     lbl_tr.Text = datatable.Rows[karmaSorular[sayac]][1].ToString();
                     btn_Cevap1.Text = datatable.Rows[rastgele[0]][2].ToString();
                     btn_cevap2.Text = datatable.Rows[rastgele[1]][2].ToString();
                     btn_cevap3.Text = datatable.Rows[rastgele[2]][2].ToString();
                     btn_cevap4.Text = datatable.Rows[rastgele[3]][2].ToString();
 
+
+
+
                 }
                 else
                 {
-                    MessageBox.Show("Test Tamamlandı");
-                    
-                   
-                }
+                        MessageBox.Show("Test Tamamlandı");
 
+
+                    }
+                
             }
         }
         //private static ucTesteBasla _instance;
@@ -129,16 +133,17 @@ namespace IngilizceKelimeOgreniyorum
 
         private void ucTesteBasla_Load(object sender, EventArgs e)
         {
+            //data.KelimeTarihAta();
             try
             {
-                
+
                 datatable = data.DurumaGoreListele("test");
                 ToplamSoruSayisi = datatable.Rows.Count;
                 //  lbl_ing.Text = datatable.Rows[sayac][2].ToString();
-                
+
                 karmaSorular = new int[ToplamSoruSayisi];
                 int i = 0;
-                while (i < ToplamSoruSayisi-1)
+                while (i < ToplamSoruSayisi - 1)
                 {
                     int deneme = rnd.Next(0, ToplamSoruSayisi);
 
@@ -178,22 +183,26 @@ namespace IngilizceKelimeOgreniyorum
                 {
                     rastgele[3] = karmaSorular[sayac];
                 }
+
+                
                 lbl_tr.Text = datatable.Rows[karmaSorular[sayac]][1].ToString();
                 btn_Cevap1.Text = datatable.Rows[rastgele[0]][2].ToString();
                 btn_cevap2.Text = datatable.Rows[rastgele[1]][2].ToString();
                 btn_cevap3.Text = datatable.Rows[rastgele[2]][2].ToString();
                 btn_cevap4.Text = datatable.Rows[rastgele[3]][2].ToString();
 
-
-            }
-            catch (Exception)
+                }
+                    catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message);
             }
+
+        
         }
 
-        private void btn_Cevap1_Click(object sender, EventArgs e)
+
+            private void btn_Cevap1_Click(object sender, EventArgs e)
         {
             Kontrol(btn_Cevap1.Text);
         }

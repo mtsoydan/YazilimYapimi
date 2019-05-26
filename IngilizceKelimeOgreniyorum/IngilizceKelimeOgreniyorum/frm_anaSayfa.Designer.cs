@@ -37,6 +37,7 @@
             this.AceKelimeOgren = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceTesteBasla = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.aceOgrenilmis = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             this.FormContainer.Name = "FormContainer";
             this.FormContainer.Size = new System.Drawing.Size(637, 451);
             this.FormContainer.TabIndex = 0;
+            this.FormContainer.Click += new System.EventHandler(this.FormContainer_Click);
             // 
             // accordionControl1
             // 
@@ -69,7 +71,8 @@
             this.aceKelimeEkle,
             this.aceKelimeSec,
             this.AceKelimeOgren,
-            this.aceTesteBasla});
+            this.aceTesteBasla,
+            this.aceOgrenilmis});
             this.accordionControlElement1.Expanded = true;
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = "Kullanıcı İşlemleri";
@@ -114,6 +117,18 @@
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
+            // aceOgrenilmis
+            // 
+            this.aceOgrenilmis.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
+            this.aceOgrenilmis.Name = "aceOgrenilmis";
+            this.aceOgrenilmis.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceOgrenilmis.Text = "Öğrenilmiş Kelimeler";
+            this.aceOgrenilmis.Click += new System.EventHandler(this.aceOgrenilmis_Click);
+            // 
             // frm_anaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -145,6 +160,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceKelimeSec;
         private DevExpress.XtraBars.Navigation.AccordionControlElement AceKelimeOgren;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceTesteBasla;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceOgrenilmis;
     }
 }
 

@@ -2,16 +2,16 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MyDataClasses">
   <DataContextMoniker Name="/MyDataClassesDataContext" />
   <nestedChildShapes>
-    <classShape Id="692b1411-1b76-4c5b-b001-f0e0383a38c0" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
-      <DataClassMoniker Name="/MyDataClassesDataContext/tbl_Kelime" />
-      <nestedChildShapes>
-        <elementListCompartment Id="b3b5ca0e-d35f-440e-83aa-6c78913c6370" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="04eb874b-9569-4711-a86f-9ad20ba608a4" absoluteBounds="2.75, 0.5, 2, 2.3478011067708335">
       <DataClassMoniker Name="/MyDataClassesDataContext/View_SorularıGoruntule" />
       <nestedChildShapes>
         <elementListCompartment Id="10b4d3c8-7155-46fb-be24-0e0a7a036c4b" absoluteBounds="2.765, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9cee0aef-b33e-4717-afbf-6250d715e48b" absoluteBounds="5.25, 3.125, 2, 2.5401025390625">
+      <DataClassMoniker Name="/MyDataClassesDataContext/tbl_Kelime" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f933eff6-a32e-48d6-8c9f-e53bcd44e6e6" absoluteBounds="5.265, 3.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

@@ -1,17 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KelimeOgrenmeAZUREDB" Class="MyDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=berkan.database.windows.net;Initial Catalog=KelimeOgrenmeAZUREDB;Persist Security Info=True;User ID=berkan" SettingsObjectName="IngilizceKelimeOgreniyorum.Properties.Settings" SettingsPropertyName="KelimeOgrenmeAZUREDBConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.tbl_Kelime" Member="tbl_Kelimes">
-    <Type Name="tbl_Kelime">
-      <Column Name="KelimeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="KelimeTR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="KelimeIng" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="KelimeTuru" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="KelimeOrnek" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="KelimeOgrenmeDurumu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="KelimeOgrenmeSeviye" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="KelimeOgrenmeTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.View_SorularıGoruntule" Member="View_SorularıGoruntules">
     <Type Name="View_SorularıGoruntule">
       <Column Name="KelimeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
@@ -24,6 +12,46 @@
       <Column Name="KelimeOgrenmeTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_Kelime" Member="tbl_Kelimes">
+    <Type Name="tbl_Kelime">
+      <Column Name="KelimeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KelimeTR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KelimeIng" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KelimeTuru" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KelimeOrnek" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KelimeOgrenmeDurumu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KelimeOgrenmeSeviye" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KelimeOgrenmeTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="KelimeSimdikiTarih" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spSoruSil" Method="spSoruSil">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDurumuTestYap" Method="spDurumuTestYap">
+    <Parameter Name="KelimeID" Parameter="kelimeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="KelimeOgrenmeDurumu" Parameter="kelimeOgrenmeDurumu" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spKelimeDurumGüncelleOgren" Method="spKelimeDurumGüncelleOgren">
+    <Parameter Name="KelimeID" Parameter="kelimeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="KelimeOgrenmeDurumu" Parameter="kelimeOgrenmeDurumu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="KelimeOgrenmeSeviye" Parameter="kelimeOgrenmeSeviye" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="KelimeTarih" Parameter="kelimeTarih" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spKelimeEkle" Method="spKelimeEkle">
+    <Parameter Name="KelimeTr" Parameter="kelimeTr" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="KelimeIng" Parameter="kelimeIng" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="KelimeTuru" Parameter="kelimeTuru" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="KelimeOrnek" Parameter="kelimeOrnek" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="KelimeOgrenmeDurumu" Parameter="kelimeOgrenmeDurumu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="KelimeOgrenmeSeviyesi" Parameter="kelimeOgrenmeSeviyesi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="KelimeOgrenmeTarihi" Parameter="kelimeOgrenmeTarihi" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="kelimeSimdikiTarih" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.OgrenmeDurumuTestOlanlar" Method="OgrenmeDurumuTestOlanlar">
     <Parameter Name="OgrenmeDurumu" Parameter="ogrenmeDurumu" Type="System.String" DbType="NVarChar(20)" />
     <ElementType Name="OgrenmeDurumuTestOlanlarResult">
@@ -35,31 +63,7 @@
       <Column Name="KelimeOgrenmeDurumu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="KelimeOgrenmeSeviye" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="KelimeOgrenmeTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="KelimeSimdikiTarih" Type="System.DateTime" DbType="Date" CanBeNull="true" />
     </ElementType>
-  </Function>
-  <Function Name="dbo.spDurumuTestYap" Method="spDurumuTestYap">
-    <Parameter Name="KelimeID" Parameter="kelimeID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="KelimeOgrenmeDurumu" Parameter="kelimeOgrenmeDurumu" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.spKelimeDurumGüncelleOgren" Method="spKelimeDurumGüncelleOgren">
-    <Parameter Name="KelimeID" Parameter="kelimeID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="KelimeOgrenmeDurumu" Parameter="kelimeOgrenmeDurumu" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="KelimeOgrenmeSeviye" Parameter="kelimeOgrenmeSeviye" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.spKelimeEkle" Method="spKelimeEkle">
-    <Parameter Name="KelimeTr" Parameter="kelimeTr" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="KelimeIng" Parameter="kelimeIng" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="KelimeTuru" Parameter="kelimeTuru" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="KelimeOrnek" Parameter="kelimeOrnek" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="KelimeOgrenmeDurumu" Parameter="kelimeOgrenmeDurumu" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="KelimeOgrenmeSeviyesi" Parameter="kelimeOgrenmeSeviyesi" Type="System.Int32" DbType="Int" />
-    <Parameter Name="KelimeOgrenmeTarihi" Parameter="kelimeOgrenmeTarihi" Type="System.DateTime" DbType="DateTime" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.spSoruSil" Method="spSoruSil">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
   </Function>
 </Database>

@@ -22,12 +22,12 @@ namespace IngilizceKelimeOgreniyorum
 
             if (index == 0)
             {
-                KelimeListesi = data.KelimeleriGetir();
+                KelimeListesi = data.KelimeleriGetir("baslagic");
 
             }
             else
             {
-                KelimeListesi = data.KelimeleriGetir(txt_ara.Text);
+                KelimeListesi = data.KelimeleriAra(txt_ara.Text);
             }
             foreach (Kelime item in KelimeListesi)
             {
@@ -66,7 +66,7 @@ namespace IngilizceKelimeOgreniyorum
         {
             for (int i = 0; i < ListviewKelimeler.CheckedItems.Count; i++)
             {
-                mydata.spKelimeDurumGüncelleOgren(int.Parse(ListviewKelimeler.CheckedItems[i].Text), "ogren", "0");
+                mydata.spKelimeDurumGüncelleOgren(int.Parse(ListviewKelimeler.CheckedItems[i].Text), "ogren", "0",DateTime.Now);
                 mydata.SubmitChanges();
             }
             Listele(0);
@@ -111,6 +111,11 @@ namespace IngilizceKelimeOgreniyorum
                 MessageBox.Show(ex.Message);
             }
             Listele(0);
+        }
+
+        private void labelControl6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
