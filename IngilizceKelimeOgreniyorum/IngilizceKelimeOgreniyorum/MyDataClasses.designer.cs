@@ -81,10 +81,17 @@ namespace IngilizceKelimeOgreniyorum
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spSoruSil")]
-		public int spSoruSil([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.OgrenmeDurumuTestOlanlar")]
+		public ISingleResult<OgrenmeDurumuTestOlanlarResult> OgrenmeDurumuTestOlanlar([global::System.Data.Linq.Mapping.ParameterAttribute(Name="OgrenmeDurumu", DbType="NVarChar(20)")] string ogrenmeDurumu)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ogrenmeDurumu);
+			return ((ISingleResult<OgrenmeDurumuTestOlanlarResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spKelimeEkle")]
+		public int spKelimeEkle([global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeTr", DbType="NVarChar(50)")] string kelimeTr, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeIng", DbType="NVarChar(50)")] string kelimeIng, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeTuru", DbType="NVarChar(50)")] string kelimeTuru, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOrnek", DbType="NVarChar(50)")] string kelimeOrnek, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeDurumu", DbType="NVarChar(50)")] string kelimeOgrenmeDurumu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeSeviyesi", DbType="Int")] System.Nullable<int> kelimeOgrenmeSeviyesi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeTarihi", DbType="DateTime")] System.Nullable<System.DateTime> kelimeOgrenmeTarihi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> kelimeSimdikiTarih)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), kelimeTr, kelimeIng, kelimeTuru, kelimeOrnek, kelimeOgrenmeDurumu, kelimeOgrenmeSeviyesi, kelimeOgrenmeTarihi, kelimeSimdikiTarih);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -102,18 +109,11 @@ namespace IngilizceKelimeOgreniyorum
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spKelimeEkle")]
-		public int spKelimeEkle([global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeTr", DbType="NVarChar(50)")] string kelimeTr, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeIng", DbType="NVarChar(50)")] string kelimeIng, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeTuru", DbType="NVarChar(50)")] string kelimeTuru, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOrnek", DbType="NVarChar(50)")] string kelimeOrnek, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeDurumu", DbType="NVarChar(50)")] string kelimeOgrenmeDurumu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeSeviyesi", DbType="Int")] System.Nullable<int> kelimeOgrenmeSeviyesi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeTarihi", DbType="DateTime")] System.Nullable<System.DateTime> kelimeOgrenmeTarihi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> kelimeSimdikiTarih)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spSoruSil")]
+		public int spSoruSil([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), kelimeTr, kelimeIng, kelimeTuru, kelimeOrnek, kelimeOgrenmeDurumu, kelimeOgrenmeSeviyesi, kelimeOgrenmeTarihi, kelimeSimdikiTarih);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
 			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.OgrenmeDurumuTestOlanlar")]
-		public ISingleResult<OgrenmeDurumuTestOlanlarResult> OgrenmeDurumuTestOlanlar([global::System.Data.Linq.Mapping.ParameterAttribute(Name="OgrenmeDurumu", DbType="NVarChar(20)")] string ogrenmeDurumu)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ogrenmeDurumu);
-			return ((ISingleResult<OgrenmeDurumuTestOlanlarResult>)(result.ReturnValue));
 		}
 	}
 	

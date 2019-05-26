@@ -22,7 +22,7 @@ namespace IngilizceKelimeOgreniyorum
 
             if (index == 0)
             {
-                KelimeListesi = data.KelimeleriGetir("baslagic");
+                KelimeListesi = data.KelimeleriGetir("baslangic");
 
             }
             else

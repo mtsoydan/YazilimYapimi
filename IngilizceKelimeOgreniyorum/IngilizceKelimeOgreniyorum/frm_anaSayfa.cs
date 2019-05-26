@@ -81,5 +81,13 @@ namespace IngilizceKelimeOgreniyorum
             uck.Dock = DockStyle.Fill;
             uck.BringToFront();
         }
+
+        private void aceIstatistik_Click(object sender, EventArgs e)
+        {
+            ucIstatistik uck = new ucIstatistik();
+            FormContainer.Controls.Add(uck);
+            uck.Dock = DockStyle.Fill;
+            uck.BringToFront();
+        }
     }
 }

@@ -13,7 +13,8 @@ namespace IngilizceKelimeOgreniyorum
 
 
         MyDataClassesDataContext mydt = new MyDataClassesDataContext();
-        List<Kelime> myListview = new List<Kelime>();
+        List<Kelime> KelimeListesi = new List<Kelime>();
+
         public void KelimeTarihAta()
         {
 
@@ -23,6 +24,16 @@ namespace IngilizceKelimeOgreniyorum
                 item.KelimeSimdikiTarih = DateTime.Now;
             }
             mydt.SubmitChanges();
+        }
+        public int AyaGoreToplamKelime(int ay)
+        {
+            int toplam = 0;
+            var sorgu = from Kelimeler in mydt.tbl_Kelimes where Kelimeler.KelimeOgrenmeTarihi.Value.Month == ay && Kelimeler.KelimeOgrenmeDurumu =="ogrendi" select Kelimeler;
+            foreach (var item in sorgu)
+            {
+                toplam += 1;
+            }
+            return toplam;
         }
         public List<Kelime> KelimeleriGetir(string durum)
         {
@@ -38,9 +49,10 @@ namespace IngilizceKelimeOgreniyorum
                 kelime.KelimeOgrenmeDurumu = item.KelimeOgrenmeDurumu;
                 kelime.KelimeOgrenmeSeviyesi = item.KelimeOgrenmeSeviye.Value;
                 kelime.KelimeOgrenmeTarihi = item.KelimeOgrenmeTarihi.Value;
-                    myListview.Add(kelime);
+
+                KelimeListesi.Add(kelime);
             }
-            return myListview;
+            return KelimeListesi;
         }
         public List<Kelime> KelimeleriAra(string kelimeTr)
         {
@@ -56,9 +68,11 @@ namespace IngilizceKelimeOgreniyorum
                 kelime.KelimeOgrenmeDurumu = item.KelimeOgrenmeDurumu;
                 kelime.KelimeOgrenmeSeviyesi = item.KelimeOgrenmeSeviye.Value;
                 kelime.KelimeOgrenmeTarihi = item.KelimeOgrenmeTarihi.Value;
-                myListview.Add(kelime);
+                kelime.KelimeOgrenmeTarihi = item.KelimeSimdikiTarih.Value;
+
+                KelimeListesi.Add(kelime);
             }
-            return myListview;
+            return KelimeListesi;
         }
 
 
