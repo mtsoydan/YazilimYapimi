@@ -41,6 +41,7 @@
             this.btn_Cevap1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.lbl_seviye = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
@@ -161,10 +162,20 @@
             this.labelControl2.TabIndex = 2;
             this.labelControl2.UseMnemonic = false;
             // 
+            // lbl_seviye
+            // 
+            this.lbl_seviye.AutoSize = true;
+            this.lbl_seviye.Location = new System.Drawing.Point(260, 399);
+            this.lbl_seviye.Name = "lbl_seviye";
+            this.lbl_seviye.Size = new System.Drawing.Size(42, 17);
+            this.lbl_seviye.TabIndex = 2;
+            this.lbl_seviye.Text = "label1";
+            // 
             // ucTesteBasla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_seviye);
             this.Controls.Add(this.panel1);
             this.Name = "ucTesteBasla";
             this.Size = new System.Drawing.Size(583, 450);
@@ -173,6 +184,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -190,5 +202,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.SimpleButton btn_Cevap1;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private System.Windows.Forms.Label lbl_seviye;
     }
 }

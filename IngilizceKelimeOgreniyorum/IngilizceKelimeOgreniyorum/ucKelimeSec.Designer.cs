@@ -54,10 +54,10 @@
             this.columnHeader5});
             this.ListviewKelimeler.FullRowSelect = true;
             this.ListviewKelimeler.GridLines = true;
-            this.ListviewKelimeler.Location = new System.Drawing.Point(3, 120);
-            this.ListviewKelimeler.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.ListviewKelimeler.Location = new System.Drawing.Point(2, 77);
+            this.ListviewKelimeler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ListviewKelimeler.Name = "ListviewKelimeler";
-            this.ListviewKelimeler.Size = new System.Drawing.Size(1218, 551);
+            this.ListviewKelimeler.Size = new System.Drawing.Size(712, 354);
             this.ListviewKelimeler.TabIndex = 8;
             this.ListviewKelimeler.UseCompatibleStateImageBehavior = false;
             this.ListviewKelimeler.View = System.Windows.Forms.View.Details;
@@ -89,10 +89,9 @@
             // 
             // txt_ara
             // 
-            this.txt_ara.Location = new System.Drawing.Point(283, 9);
-            this.txt_ara.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_ara.Location = new System.Drawing.Point(165, 6);
             this.txt_ara.Name = "txt_ara";
-            this.txt_ara.Size = new System.Drawing.Size(665, 68);
+            this.txt_ara.Size = new System.Drawing.Size(388, 42);
             this.txt_ara.TabIndex = 12;
             this.txt_ara.EditValueChanged += new System.EventHandler(this.txt_ara_EditValueChanged);
             this.txt_ara.TextChanged += new System.EventHandler(this.txt_ara_TextChanged);
@@ -101,31 +100,29 @@
             // 
             this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl6.LineVisible = true;
-            this.labelControl6.Location = new System.Drawing.Point(0, 56);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl6.Location = new System.Drawing.Point(0, 36);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(1221, 53);
+            this.labelControl6.Size = new System.Drawing.Size(712, 34);
             this.labelControl6.TabIndex = 11;
+            this.labelControl6.Click += new System.EventHandler(this.labelControl6_Click);
             // 
             // labelControl1
             // 
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.labelControl1.LineVisible = true;
-            this.labelControl1.Location = new System.Drawing.Point(117, 20);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl1.Location = new System.Drawing.Point(68, 13);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(156, 55);
+            this.labelControl1.Size = new System.Drawing.Size(91, 35);
             this.labelControl1.TabIndex = 10;
             this.labelControl1.Text = "Türkçe Anlamı :";
             // 
             // btn_Ogren
             // 
             this.btn_Ogren.ImageOptions.Image = global::IngilizceKelimeOgreniyorum.Properties.Resources.add_32x32;
-            this.btn_Ogren.Location = new System.Drawing.Point(283, 695);
-            this.btn_Ogren.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_Ogren.Location = new System.Drawing.Point(165, 445);
             this.btn_Ogren.Name = "btn_Ogren";
-            this.btn_Ogren.Size = new System.Drawing.Size(242, 77);
+            this.btn_Ogren.Size = new System.Drawing.Size(141, 49);
             this.btn_Ogren.TabIndex = 9;
             this.btn_Ogren.Text = "Öğren";
             this.btn_Ogren.Click += new System.EventHandler(this.btn_Ogren_Click);
@@ -133,17 +130,16 @@
             // btn_kaldir
             // 
             this.btn_kaldir.ImageOptions.Image = global::IngilizceKelimeOgreniyorum.Properties.Resources.remove_32x32;
-            this.btn_kaldir.Location = new System.Drawing.Point(535, 695);
-            this.btn_kaldir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_kaldir.Location = new System.Drawing.Point(312, 445);
             this.btn_kaldir.Name = "btn_kaldir";
-            this.btn_kaldir.Size = new System.Drawing.Size(242, 77);
+            this.btn_kaldir.Size = new System.Drawing.Size(141, 49);
             this.btn_kaldir.TabIndex = 14;
             this.btn_kaldir.Text = "Listeden Kaldır";
             this.btn_kaldir.Click += new System.EventHandler(this.btn_kaldir_Click);
             // 
             // ucKelimeSec
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn_kaldir);
             this.Controls.Add(this.txt_ara);
@@ -151,9 +147,8 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.btn_Ogren);
             this.Controls.Add(this.ListviewKelimeler);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ucKelimeSec";
-            this.Size = new System.Drawing.Size(1221, 777);
+            this.Size = new System.Drawing.Size(712, 497);
             this.Load += new System.EventHandler(this.ucKelimeSec_Load);
             this.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.ucKelimeSec_ControlAdded);
             ((System.ComponentModel.ISupportInitialize)(this.txt_ara.Properties)).EndInit();

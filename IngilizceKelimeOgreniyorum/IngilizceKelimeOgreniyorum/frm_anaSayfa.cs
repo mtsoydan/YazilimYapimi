@@ -16,7 +16,6 @@ namespace IngilizceKelimeOgreniyorum
         {
             InitializeComponent();
         }
-
         private void aceKelimeEkle_Click(object sender, EventArgs e)
         {
 
@@ -67,6 +66,28 @@ namespace IngilizceKelimeOgreniyorum
         private void frm_anaSayfa_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormContainer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aceOgrenilmis_Click(object sender, EventArgs e)
+        {
+
+            ucOgrenilmisKelimeler uck = new ucOgrenilmisKelimeler();
+            FormContainer.Controls.Add(uck);
+            uck.Dock = DockStyle.Fill;
+            uck.BringToFront();
+        }
+
+        private void aceIstatistik_Click(object sender, EventArgs e)
+        {
+            ucIstatistik uck = new ucIstatistik();
+            FormContainer.Controls.Add(uck);
+            uck.Dock = DockStyle.Fill;
+            uck.BringToFront();
         }
     }
 }

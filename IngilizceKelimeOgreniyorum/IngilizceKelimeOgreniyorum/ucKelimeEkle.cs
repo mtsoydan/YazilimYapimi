@@ -48,7 +48,7 @@ namespace IngilizceKelimeOgreniyorum
             try
             {
                
-                mydt.spKelimeEkle(txt_turkce.Text, txt_ingilizce.Text, cmbKelimeTur.SelectedItem.ToString(), txt_aciklama.Text, "Baslangic", -1, DateTime.Now);
+                mydt.spKelimeEkle(txt_turkce.Text, txt_ingilizce.Text, cmbKelimeTur.SelectedItem.ToString(), txt_aciklama.Text, "Baslangic", -1, DateTime.Now,DateTime.Now);
 
                     mydt.SubmitChanges();
                 MessageBox.Show("Kayıt Başarıyla Eklendi");
