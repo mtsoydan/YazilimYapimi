@@ -1,7 +1,7 @@
 # Zoboo
-<div  style="background-color: #323542;text-align:center" >
-  <img src="Img/Zoboomafoo.png">
-</div>
+<p align="center" >
+  <img src="Img/Zoboo.jpg">
+</p>
 <br>:heavy_check_mark: Kullanılan Teknolojiler: 
 
 ![CSHARP](Img/CSharp.jpeg)
