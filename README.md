@@ -1,12 +1,20 @@
-# Yazilim Yapimi
-MCBU software engineering is the first project of Software Construction.
+# Zoboo
 
-                                 MANİSA CELAL BAYAR ÜNİVERSİTESİ
-
-          HASAN FERDİ TURGUTLU TEKNOLOJİ FAKÜLTESİ 2.DÖNEM PROJE ÖDEVİ RAPORU 2018-2019
-PROJE EKİBİ
-
-Berkan ŞAŞMAZ - 182803002 (https://github.com/berkansasmaz)
+:point_right: Kullanılan Teknolojiler: <br>
+[![CSHARP](https://i.hizliresim.com/nbPJka.jpg)](https://hizliresim.com/nbPJka)
+[![SQL](https://i.hizliresim.com/WX2GVq.png)](https://hizliresim.com/WX2GVq)
+[![AZURE](https://i.hizliresim.com/odQ6Ao.png)](https://hizliresim.com/odQ6Ao)
 
 
-Mustafa Taha SOYDAN - 162805003 (https://github.com/Mtsoydan)
+PROJE EKİBİ: <br>
+
+[Berkan ŞAŞMAZ](https://github.com/berkansasmaz)
+
+[Mustafa Taha SOYDAN](https://github.com/Mtsoydan)
+
+TODO: <br>
+- [x] İstatistik ekranı ekle
+- [ ] User Register/Auth ekle
+- [ ] Database-Level Roles
+
+ 
