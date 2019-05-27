@@ -1,19 +1,20 @@
 # Zoboo
-MCBU software engineering is the first project of Software Construction.
-
-1.Kullanılan Teknoloiiler <br>
-![C#](https://cdn-images-1.medium.com/max/1050/1*K1urZCeiOzSRhYM-8J8-tw.jpeg)
-
-
-
+->![ZOBOO](Img/Zoboomafoo_(2).png)<-
+:point_right: Kullanılan Teknolojiler: <br>
+![CSHARP](Img/CSharp.jpeg)
+![SQL](Img/SQL-Server-to-SQL-Azure.png)
+![AZURE](Img/MSAzure.png)
 
 
+:point_right: PROJE EKİBİ: <br>
 
-PROJE EKİBİ
+[Berkan ŞAŞMAZ](https://github.com/berkansasmaz)
 
-Berkan ŞAŞMAZ - 182803002 (https://github.com/berkansasmaz)
+[Mustafa Taha SOYDAN](https://github.com/Mtsoydan)
 
+TODO: <br>
+- [x] İstatistik ekranı ekle
+- [ ] User Register/Auth ekle
+- [ ] Database-Level Roles
 
-Mustafa Taha SOYDAN - 162805003 (https://github.com/Mtsoydan)
-
-
+ 
