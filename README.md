@@ -2,7 +2,8 @@
 <p align="center">
   <img src="Img/Zoboomafoo_(2).png">
 </p>
-<br>:heavy_check_mark: Kullanılan Teknolojiler: <br>
+<br>:heavy_check_mark: Kullanılan Teknolojiler: 
+
 ![CSHARP](Img/CSharp.jpeg)
 ![SQL](Img/SQL-Server-to-SQL-Azure.png)
 ![AZURE](Img/MSAzure.png)
