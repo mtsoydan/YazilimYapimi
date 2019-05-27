@@ -16,13 +16,13 @@
 ## :heavy_check_mark: Projenin Çalışma Mantığı
 <p> Kullanıcı ezberlemek istediği kelimeyi sisteme ekler ve sistem belirli aralıklarla(1 gün, 1 hafta, 1 ay, 6 ay) eklenilen kelimelerden sınava tabi tutar. Kullanıcı her sınavın sonucunu doğru bildiğinde bir sonraki aşamaya geçer ve yeni sınav gününü bekler. Kullanıcın sisteme düzenli olarak girmesi gerekmektedir. Sınav tarihini kaçırdığı takdirde sınav sonucu yanlış kabul edilecek ve sorgu döngüsü en baştan başlayacaktır.</p>
 
-##  :heavy_check_mark: PROJE EKİBİ <br>
+##  :heavy_check_mark: Proje Ekibi <br>
 
 [Berkan ŞAŞMAZ](https://github.com/berkansasmaz)
 
 [Mustafa Taha SOYDAN](https://github.com/Mtsoydan)
 
-## TODO <br>
+## Todo <br>
 - [x] İstatistik ekranı ekle
 - [x] Tasarımı düzelt
 - [ ] User Register/Auth ekle
