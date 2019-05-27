@@ -22,9 +22,16 @@
 
 [Mustafa Taha SOYDAN](https://github.com/Mtsoydan)
 
-TODO: <br>
+## TODO: <br>
 - [x] İstatistik ekranı ekle
+- [x] Tasarımı düzelt
 - [ ] User Register/Auth ekle
-- [ ] Database-Level Roles
+- [ ] Veri tabanı yetkilendirme
+  
 
- 
+ ## Contact <br>
+ - [Twitter](https://twitter.com/berkansasmazz)
+ - [Medium](https://medium.com/@berkansasmaz)
+ - [LinkedIn](https://www.linkedin.com/in/berkansasmaz/)
+ - [Kişisel Web Sitesi](https://www.berkansasmaz.com)
+
