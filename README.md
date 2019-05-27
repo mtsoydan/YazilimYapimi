@@ -1,12 +1,12 @@
 # Zoboo
 <p align="center">
-  <img src="Img/Zoboomafoo_(2).png">
+  <img src="Img/Zoboomafoo.png">
 </p>
 <br>:heavy_check_mark: Kullanılan Teknolojiler: 
 
 ![CSHARP](Img/CSharp.jpeg)
-![SQL](Img/SQL-Server-to-SQL-Azure.png)
-![AZURE](Img/MSAzure.png)
+![SQL](Img/sql-azure.png)
+![AZURE](Img/Azure.png)
 
 
 :heavy_check_mark: PROJE EKİBİ: <br>
