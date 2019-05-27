@@ -40,6 +40,7 @@
             this.lstboxOgrenilmis.Name = "lstboxOgrenilmis";
             this.lstboxOgrenilmis.Size = new System.Drawing.Size(438, 364);
             this.lstboxOgrenilmis.TabIndex = 0;
+            this.lstboxOgrenilmis.SelectedIndexChanged += new System.EventHandler(this.lstboxOgrenilmis_SelectedIndexChanged);
             // 
             // label1
             // 

@@ -3,28 +3,24 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Linq.SqlClient;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace IngilizceKelimeOgreniyorum
 {
   public  class Data
     {
 
-
+   
         MyDataClassesDataContext mydt = new MyDataClassesDataContext();
         List<Kelime> KelimeListesi = new List<Kelime>();
+        DataTable dttable = new DataTable();
 
-        public void KelimeTarihAta()
-        {
 
-            var sorgu = from kelime in mydt.tbl_Kelimes select kelime;
-            foreach (var item in sorgu)
-            {
-                item.KelimeSimdikiTarih = DateTime.Now;
-            }
-            mydt.SubmitChanges();
-        }
+
         public int AyaGoreToplamKelime(int ay)
         {
             int toplam = 0;
@@ -68,18 +64,22 @@ namespace IngilizceKelimeOgreniyorum
                 kelime.KelimeOgrenmeDurumu = item.KelimeOgrenmeDurumu;
                 kelime.KelimeOgrenmeSeviyesi = item.KelimeOgrenmeSeviye.Value;
                 kelime.KelimeOgrenmeTarihi = item.KelimeOgrenmeTarihi.Value;
-                kelime.KelimeOgrenmeTarihi = item.KelimeSimdikiTarih.Value;
+                
 
                 KelimeListesi.Add(kelime);
             }
             return KelimeListesi;
+        }
+        private void dataRowSet(object )
+        {
+
         }
 
 
 
         public DataTable DurumaGoreListele(string _durum)
         {
-            DataTable dttable = new DataTable();
+
             var sorgu = from kelime in mydt.OgrenmeDurumuTestOlanlar(_durum) select kelime;
             dttable.Columns.Add(new DataColumn("KelimeID", typeof(int)));//0
             dttable.Columns.Add(new DataColumn("KelimeTr", typeof(string)));//1
@@ -90,8 +90,8 @@ namespace IngilizceKelimeOgreniyorum
             dttable.Columns.Add(new DataColumn("KelimeSeviye", typeof(int)));//6
 
             dttable.Columns.Add(new DataColumn("KelimeOgrenmeTarihi", typeof(DateTime)));//7
-            dttable.Columns.Add(new DataColumn("KelimeSimdikiTarihi", typeof(DateTime)));//8
-            if (_durum == "ogrendi")
+            
+            if (_durum == "ogren")
             {
                 sorgu.ToList().ForEach((durum) =>
                 {
@@ -105,7 +105,7 @@ namespace IngilizceKelimeOgreniyorum
                     newRow.SetField<int>("KelimeSeviye", durum.KelimeOgrenmeSeviye.Value);
 
                     newRow.SetField<DateTime>("KelimeOgrenmeTarihi", durum.KelimeOgrenmeTarihi.Value);
-                    newRow.SetField<DateTime>("KelimeSimdikiTarihi", durum.KelimeSimdikiTarih.Value);
+                
 
 
                     dttable.Rows.Add(newRow);
@@ -121,7 +121,7 @@ namespace IngilizceKelimeOgreniyorum
                 {
                     if (durum.KelimeOgrenmeSeviye == 0)
                     {
-                        TimeSpan fark = Convert.ToDateTime(durum.KelimeSimdikiTarih) - Convert.ToDateTime(durum.KelimeOgrenmeTarihi);
+                        TimeSpan fark = DateTime.Now - Convert.ToDateTime(durum.KelimeOgrenmeTarihi);
                         if (fark.Days == 1)
                         {
                             DataRow newRow = dttable.NewRow();
@@ -134,14 +134,14 @@ namespace IngilizceKelimeOgreniyorum
                             newRow.SetField<int>("KelimeSeviye", durum.KelimeOgrenmeSeviye.Value);
 
                             newRow.SetField<DateTime>("KelimeOgrenmeTarihi", durum.KelimeOgrenmeTarihi.Value);
-                            newRow.SetField<DateTime>("KelimeSimdikiTarihi", durum.KelimeSimdikiTarih.Value);
+                            
                             dttable.Rows.Add(newRow);
 
                         }
                     }
                     else if (durum.KelimeOgrenmeSeviye == 1)
                     {
-                        TimeSpan fark = Convert.ToDateTime(durum.KelimeSimdikiTarih) - Convert.ToDateTime(durum.KelimeOgrenmeTarihi);
+                        TimeSpan fark = DateTime.Now - Convert.ToDateTime(durum.KelimeOgrenmeTarihi);
                         if (fark.Days <= 7)
                         {
                             DataRow newRow = dttable.NewRow();
@@ -154,14 +154,14 @@ namespace IngilizceKelimeOgreniyorum
                             newRow.SetField<int>("KelimeSeviye", durum.KelimeOgrenmeSeviye.Value);
 
                             newRow.SetField<DateTime>("KelimeOgrenmeTarihi", durum.KelimeOgrenmeTarihi.Value);
-                            newRow.SetField<DateTime>("KelimeSimdikiTarihi", durum.KelimeSimdikiTarih.Value);
+                           
                             dttable.Rows.Add(newRow);
 
                         }
                     }
                     else if (durum.KelimeOgrenmeSeviye == 2)
                     {
-                        TimeSpan fark = Convert.ToDateTime(durum.KelimeSimdikiTarih) - Convert.ToDateTime(durum.KelimeOgrenmeTarihi);
+                        TimeSpan fark = DateTime.Now - Convert.ToDateTime(durum.KelimeOgrenmeTarihi);
                         if (fark.Days <= 10)
                         {
                             DataRow newRow = dttable.NewRow();
@@ -174,14 +174,14 @@ namespace IngilizceKelimeOgreniyorum
                             newRow.SetField<int>("KelimeSeviye", durum.KelimeOgrenmeSeviye.Value);
 
                             newRow.SetField<DateTime>("KelimeOgrenmeTarihi", durum.KelimeOgrenmeTarihi.Value);
-                            newRow.SetField<DateTime>("KelimeSimdikiTarihi", durum.KelimeSimdikiTarih.Value);
+                          
                             dttable.Rows.Add(newRow);
 
                         }
                     }
                     else if (durum.KelimeOgrenmeSeviye == 3)
                     {
-                        TimeSpan fark = Convert.ToDateTime(durum.KelimeSimdikiTarih) - Convert.ToDateTime(durum.KelimeOgrenmeTarihi);
+                        TimeSpan fark = DateTime.Now - Convert.ToDateTime(durum.KelimeOgrenmeTarihi);
                         if (fark.Days <= 15)
                         {
                             DataRow newRow = dttable.NewRow();
@@ -194,7 +194,6 @@ namespace IngilizceKelimeOgreniyorum
                             newRow.SetField<int>("KelimeSeviye", durum.KelimeOgrenmeSeviye.Value);
 
                             newRow.SetField<DateTime>("KelimeOgrenmeTarihi", durum.KelimeOgrenmeTarihi.Value);
-                            newRow.SetField<DateTime>("KelimeSimdikiTarihi", durum.KelimeSimdikiTarih.Value);
                             dttable.Rows.Add(newRow);
 
                         }

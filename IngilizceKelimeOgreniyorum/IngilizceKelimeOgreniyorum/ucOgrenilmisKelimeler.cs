@@ -30,7 +30,7 @@ namespace IngilizceKelimeOgreniyorum
 
                 foreach (Kelime item in KelimeListesi)
                 {
-                    lstboxOgrenilmis.Items.Add(item.KelimeID + "-" + item.KelimeTr + "-" + item.KelimeIng);
+                    lstboxOgrenilmis.Items.Add( item.KelimeTr + "-" + item.KelimeIng+ "---->Öğrenme Tarihi"+ item.KelimeOgrenmeTarihi.ToShortDateString());
                 }
                 KelimeListesi.Clear();
                 lbl_OgrenilmisKelimeSayisi.Text = lstboxOgrenilmis.Items.Count.ToString();
@@ -43,6 +43,11 @@ namespace IngilizceKelimeOgreniyorum
                 
 
             
+        }
+
+        private void lstboxOgrenilmis_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
