@@ -1,9 +1,9 @@
 # Zoboo
 
 :point_right: Kullanılan Teknolojiler: <br>
-[![CSHARP](https://i.hizliresim.com/nbPJka.jpg)](https://hizliresim.com/nbPJka)
-[![SQL](https://i.hizliresim.com/WX2GVq.png)](https://hizliresim.com/WX2GVq)
-[![AZURE](https://i.hizliresim.com/odQ6Ao.png)](https://hizliresim.com/odQ6Ao)
+[![CSHARP](https://i.hizliresim.com/nbPJka.jpg)]
+[![SQL](https://i.hizliresim.com/WX2GVq.png)]
+[![AZURE](https://i.hizliresim.com/odQ6Ao.png)]
 
 
 PROJE EKİBİ: <br>
