@@ -70,11 +70,7 @@ namespace IngilizceKelimeOgreniyorum
             }
             return KelimeListesi;
         }
-        private void dataRowSet(object )
-        {
-
-        }
-
+       
 
 
         public DataTable DurumaGoreListele(string _durum)

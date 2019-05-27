@@ -40,6 +40,7 @@ namespace IngilizceKelimeOgreniyorum
                     foreach (var item in sorgu)
                     {
                         item.KelimeOgrenmeSeviye += 1;
+                        item.KelimeOgrenmeTarihi = DateTime.Now;
 
                         if (item.KelimeOgrenmeSeviye == 4)
                         {

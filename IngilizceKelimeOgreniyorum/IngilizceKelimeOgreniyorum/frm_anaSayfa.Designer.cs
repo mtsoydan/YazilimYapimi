@@ -37,8 +37,8 @@
             this.AceKelimeOgren = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceTesteBasla = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceOgrenilmis = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.aceIstatistik = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -46,10 +46,10 @@
             // FormContainer
             // 
             this.FormContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FormContainer.Location = new System.Drawing.Point(202, 62);
-            this.FormContainer.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.FormContainer.Location = new System.Drawing.Point(346, 100);
+            this.FormContainer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.FormContainer.Name = "FormContainer";
-            this.FormContainer.Size = new System.Drawing.Size(637, 451);
+            this.FormContainer.Size = new System.Drawing.Size(1092, 702);
             this.FormContainer.TabIndex = 0;
             this.FormContainer.Click += new System.EventHandler(this.FormContainer_Click);
             // 
@@ -58,12 +58,12 @@
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 62);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 100);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.RootDisplayMode = DevExpress.XtraBars.Navigation.AccordionControlRootDisplayMode.Footer;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(202, 451);
+            this.accordionControl1.Size = new System.Drawing.Size(346, 702);
             this.accordionControl1.TabIndex = 1;
             // 
             // accordionControlElement1
@@ -77,7 +77,7 @@
             this.aceIstatistik});
             this.accordionControlElement1.Expanded = true;
             this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Text = "Kullanıcı İşlemleri";
+            this.accordionControlElement1.Text = "Zoboo";
             // 
             // aceKelimeEkle
             // 
@@ -119,18 +119,6 @@
             this.aceOgrenilmis.Text = "Öğrenilmiş Kelimeler";
             this.aceOgrenilmis.Click += new System.EventHandler(this.aceOgrenilmis_Click);
             // 
-            // fluentDesignFormControl1
-            // 
-            this.fluentDesignFormControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fluentDesignFormControl1.FluentDesignForm = this;
-            this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(839, 62);
-            this.fluentDesignFormControl1.TabIndex = 2;
-            this.fluentDesignFormControl1.TabStop = false;
-            // 
             // aceIstatistik
             // 
             this.aceIstatistik.Name = "aceIstatistik";
@@ -138,21 +126,33 @@
             this.aceIstatistik.Text = "İstatistik";
             this.aceIstatistik.Click += new System.EventHandler(this.aceIstatistik_Click);
             // 
+            // fluentDesignFormControl1
+            // 
+            this.fluentDesignFormControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fluentDesignFormControl1.FluentDesignForm = this;
+            this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
+            this.fluentDesignFormControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1438, 100);
+            this.fluentDesignFormControl1.TabIndex = 2;
+            this.fluentDesignFormControl1.TabStop = false;
+            // 
             // frm_anaSayfa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 513);
+            this.ClientSize = new System.Drawing.Size(1438, 802);
             this.ControlContainer = this.FormContainer;
             this.Controls.Add(this.FormContainer);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frm_anaSayfa";
             this.NavigationControl = this.accordionControl1;
-            this.Text = "İngilizce Kelime Öğreniyorum";
+            this.Text = "ZOBOO";
             this.Load += new System.EventHandler(this.frm_anaSayfa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
