@@ -103,6 +103,7 @@ namespace IngilizceKelimeOgreniyorum
                     dizi[i] = int.Parse(ListviewKelimeler.CheckedItems[i].Text);
                     //MessageBox.Show(listView1.CheckedItems[i].Text);
                     data.KelimeSil(dizi[i]);
+                    
                 }
                 MessageBox.Show("Kayıtlar Silindi");
             }

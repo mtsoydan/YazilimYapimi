@@ -12,7 +12,7 @@ namespace IngilizceKelimeOgreniyorum.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.1.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -53,6 +53,17 @@ namespace IngilizceKelimeOgreniyorum.Properties {
         public string KelimeOgrenmeAZUREDBConnectionString {
             get {
                 return ((string)(this["KelimeOgrenmeAZUREDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=berkan.database.windows.net;Initial Catalog=KelimeOgrenmeAZUREDB;Pers" +
+            "ist Security Info=True;User ID=berkan;Password=7dr87d7dr.")]
+        public string KelimeOgrenmeAZUREDBConnectionString1 {
+            get {
+                return ((string)(this["KelimeOgrenmeAZUREDBConnectionString1"]));
             }
         }
     }

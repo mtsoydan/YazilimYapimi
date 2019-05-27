@@ -36,7 +36,7 @@ namespace IngilizceKelimeOgreniyorum
     #endregion
 		
 		public MyDataClassesDataContext() : 
-				base(global::IngilizceKelimeOgreniyorum.Properties.Settings.Default.KelimeOgrenmeAZUREDBConnectionString, mappingSource)
+				base(global::IngilizceKelimeOgreniyorum.Properties.Settings.Default.KelimeOgrenmeAZUREDBConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -88,10 +88,10 @@ namespace IngilizceKelimeOgreniyorum
 			return ((ISingleResult<OgrenmeDurumuTestOlanlarResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spKelimeEkle")]
-		public int spKelimeEkle([global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeTr", DbType="NVarChar(50)")] string kelimeTr, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeIng", DbType="NVarChar(50)")] string kelimeIng, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeTuru", DbType="NVarChar(50)")] string kelimeTuru, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOrnek", DbType="NVarChar(50)")] string kelimeOrnek, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeDurumu", DbType="NVarChar(50)")] string kelimeOgrenmeDurumu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeSeviyesi", DbType="Int")] System.Nullable<int> kelimeOgrenmeSeviyesi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeTarihi", DbType="DateTime")] System.Nullable<System.DateTime> kelimeOgrenmeTarihi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> kelimeSimdikiTarih)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spSoruSil")]
+		public int spSoruSil([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), kelimeTr, kelimeIng, kelimeTuru, kelimeOrnek, kelimeOgrenmeDurumu, kelimeOgrenmeSeviyesi, kelimeOgrenmeTarihi, kelimeSimdikiTarih);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -109,10 +109,10 @@ namespace IngilizceKelimeOgreniyorum
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spSoruSil")]
-		public int spSoruSil([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spKelimeEkle")]
+		public int spKelimeEkle([global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeTr", DbType="NVarChar(50)")] string kelimeTr, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeIng", DbType="NVarChar(50)")] string kelimeIng, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeTuru", DbType="NVarChar(50)")] string kelimeTuru, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOrnek", DbType="NVarChar(50)")] string kelimeOrnek, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeDurumu", DbType="NVarChar(50)")] string kelimeOgrenmeDurumu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeSeviyesi", DbType="Int")] System.Nullable<int> kelimeOgrenmeSeviyesi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="KelimeOgrenmeTarihi", DbType="DateTime")] System.Nullable<System.DateTime> kelimeOgrenmeTarihi)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), kelimeTr, kelimeIng, kelimeTuru, kelimeOrnek, kelimeOgrenmeDurumu, kelimeOgrenmeSeviyesi, kelimeOgrenmeTarihi);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -292,8 +292,6 @@ namespace IngilizceKelimeOgreniyorum
 		
 		private System.Nullable<System.DateTime> _KelimeOgrenmeTarihi;
 		
-		private System.Nullable<System.DateTime> _KelimeSimdikiTarih;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -314,8 +312,6 @@ namespace IngilizceKelimeOgreniyorum
     partial void OnKelimeOgrenmeSeviyeChanged();
     partial void OnKelimeOgrenmeTarihiChanging(System.Nullable<System.DateTime> value);
     partial void OnKelimeOgrenmeTarihiChanged();
-    partial void OnKelimeSimdikiTarihChanging(System.Nullable<System.DateTime> value);
-    partial void OnKelimeSimdikiTarihChanged();
     #endregion
 		
 		public tbl_Kelime()
@@ -479,26 +475,6 @@ namespace IngilizceKelimeOgreniyorum
 					this._KelimeOgrenmeTarihi = value;
 					this.SendPropertyChanged("KelimeOgrenmeTarihi");
 					this.OnKelimeOgrenmeTarihiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KelimeSimdikiTarih", DbType="Date")]
-		public System.Nullable<System.DateTime> KelimeSimdikiTarih
-		{
-			get
-			{
-				return this._KelimeSimdikiTarih;
-			}
-			set
-			{
-				if ((this._KelimeSimdikiTarih != value))
-				{
-					this.OnKelimeSimdikiTarihChanging(value);
-					this.SendPropertyChanging();
-					this._KelimeSimdikiTarih = value;
-					this.SendPropertyChanged("KelimeSimdikiTarih");
-					this.OnKelimeSimdikiTarihChanged();
 				}
 			}
 		}
