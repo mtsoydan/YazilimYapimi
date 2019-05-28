@@ -19,6 +19,7 @@
 ## :heavy_check_mark: Todo <br>
 - [x] İstatistik ekranı ekle
 - [x] Tasarımı düzelt
+- [x] Setup
 - [ ] User Register/Auth ekle
 - [ ] Veri tabanı yetkilendirme
   
