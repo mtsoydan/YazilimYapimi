@@ -10,7 +10,7 @@
 ![SQL](Img/sql-azure.png)
 
 ## :heavy_check_mark: Kurulum
-[Setup](Img/IngilizceKelimeOgreniyorum/ZobooSetup)
+[Setup](IngilizceKelimeOgreniyorum/ZobooSetup)
 
 ## :heavy_check_mark: Projenin Amacı
 <p>Kullanıcıların ingilizce kelimeleri kalıcı olarak ezberlemesin kolaylaştırılması, basit arayüzü ile kullanımı kolay ve grafiksel ezberlenen kelime sayılarının takip edilmesi hedeflenmiştir.</p>
