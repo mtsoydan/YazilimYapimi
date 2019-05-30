@@ -32,8 +32,6 @@
 [Mustafa Taha SOYDAN](https://github.com/Mtsoydan)
 
  ## :heavy_check_mark: Contact <br>
- - [Twitter](https://twitter.com/berkansasmazz)
- - [Medium](https://medium.com/@berkansasmaz)
- - [LinkedIn](https://www.linkedin.com/in/berkansasmaz/)
- - [Kişisel Web Sitesi](https://www.berkansasmaz.com)
+ - [Facebook](https://www.facebook.com/mustafataha.soydan)
+ - [LinkedIn](https://www.linkedin.com/in/mustafa-taha-soydan-282640142/)
 
